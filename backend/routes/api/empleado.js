@@ -33,6 +33,21 @@ router.get('/', function(req, res, next){
     }
 }); //Fin del metodo Get
 
+//Creación del metodo Post
+router.post('/new', function(req, res, next){
+    var _empleadoData = Object.assign({}, empleadoData, req.body);
+    if(!data){
+        data = [];
+    }
+    data.push(_empleadoData);
+    fileModel.write(data, function(err){
+    if(err){
+        console.log(err);
+        return res.status(500).json({'error': 'Error al obtener los datos'});
+    }
+    return res.status(200).json(_empleadoData);
+    });
+});
 
 
 module.exports = router;
