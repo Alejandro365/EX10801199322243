@@ -78,7 +78,33 @@ router.put('/done/:rtn', function(req, res, next){
     });
 });//Fin metodo PUT
 
+//Creación metodo Delete
+router.delete('/delete/:rtn', function(req, res, next){
+    var _empleadoRtn = req.params.RTN;
+    var nuevo = data.filter(
+        function(doc, i){
+            if (doc.rtn == _empleadoRtn){
+                return false;
+            }
+            return true;
+        }
+    );
+    data = nuevo;
+    fileModel.write(data, function (err){
+        if (err){
+            console.log(err);
+            return res.status(500).json({'error':'Error al Guardar datos'});
+        }
+        return res.status(200).json({'delete':_empleadoRtn});
+    });
+});
 
-
+fileModel.read(function(err , filedata){
+  if(err){
+    console.log(err);
+  } else{
+    data = JSON.parse(filedata);
+  }
+});
 
 module.exports = router;

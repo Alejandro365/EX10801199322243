@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "d5d98c4d-7be4-4790-b9c5-773c27b51962",
+		"name": "EX10801199322243",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/empleado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/empleado",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empleado"
+					]
+				},
+				"description": "Metodo GET"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/empleado/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "RTN",
+							"value": "0801199322243777",
+							"type": "text"
+						},
+						{
+							"key": "empresa",
+							"value": "UNAH",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "cesar@unah.edu",
+							"type": "text"
+						},
+						{
+							"key": "rubro",
+							"value": "Educación",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Blv Suyapa",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "98345675",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/empleado/new",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empleado",
+						"new"
+					]
+				},
+				"description": "Metodo POST"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/empleado/done/0801199322243777",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "rubro",
+							"value": "Enseñanza",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/empleado/done/0801199322243777",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empleado",
+						"done",
+						"0801199322243777"
+					]
+				},
+				"description": "Metodo PUT"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/empleado/delete/0801199322243777",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/empleado/delete/0801199322243777",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empleado",
+						"delete",
+						"0801199322243777"
+					]
+				},
+				"description": "Metodo DELETE"
+			},
+			"response": []
+		}
+	]
+}
